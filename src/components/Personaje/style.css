@@ -1,0 +1,117 @@
+.card {
+  grid-column-end: span 4;
+  display: flex;
+  flex-direction: column;
+  background-color: #39393b;
+  border-radius: 5px;
+  transition: all 0.3s ease 0s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+.text--medium {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ecf0f1;
+}
+
+.card__image-container {
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+
+.card__image-container img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__content {
+  padding: 20px;
+}
+
+.card__title {
+  margin-bottom: 20px;
+}
+
+.card__info {
+  display: flex;
+  align-self: end;
+  align-items: center;
+}
+
+.card__price {
+  margin-left: auto;
+  padding: 5px 20px;
+  background-color: #ce1e1e;
+  border-radius: 20px;
+  border: 0;
+  font-size: 18px;
+}
+.card__price:hover{
+  cursor: pointer;
+  background-color: #b12828;
+  transform: scale(1.03);
+}
+.name{
+  color: #f0f0f0;
+  font-size: 19px;
+}
+ul{
+  list-style: none;
+  letter-spacing: 0.5px;
+}
+.specie{
+  color: #f0f0f0;
+  font-size: 15px;
+}
+small{
+  color: #f0f0f0;
+}
+.Dead{
+  color: rgb(189, 16, 16);
+}
+.Alive{
+  color: rgb(10, 161, 10);
+}
+.unknown{
+  color: rgb(8, 62, 211);
+}
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    grid-column-end: span 6;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    grid-gap: 20px;
+  }
+  .card {
+    grid-column-end: span 12;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    grid-template-columns: 10px repeat(6, 1fr) 10px;
+    grid-gap: 10px;
+  }
+  .cards {
+    grid-column: 2 / span 6;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+  }
+  .card {
+    grid-column-end: span 6;
+  }
+}
